@@ -61,8 +61,8 @@ Make this files into ZIP file, and upload it as a app in AWS Beastalk
 │        └─ 60-ensure-udp514-to-5140.sh # REQUIRED
 │        └─ 40-restart-fluentd.sh # REQUIRED
 ├─ config/
-│  └─ fluentd.conf
-└─ Procfile # It deploy dummy web deamon to pass health check.
+│  └─ fluentd.conf # Set your fluentd.conf file here
+└─ Procfile # It deploys dummy web deamon to pass health check.
 ```
 
 ## Requirements
