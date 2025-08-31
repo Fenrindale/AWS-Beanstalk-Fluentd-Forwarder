@@ -1,5 +1,5 @@
 # AWS-Beanstalk-Syslog-Forwarder
-Since AWS-Beanstalk is not designed to collect UDP streams, but there are no other AWS native external syslog collertor service,
+Since AWS-Beanstalk is not designed to collect UDP streams, but there are no other AWS native external syslog collector service with some native cloud features
 i decided to customize AWS beanstalk to somehow collect UDP streams.
 
 It is easy to manage auto-scaled EC2s with automatic OS / package patch management.
