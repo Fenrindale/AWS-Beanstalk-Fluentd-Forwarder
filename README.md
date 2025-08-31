@@ -132,8 +132,8 @@ If you use AWS Firehose for output of fluentd. (You will for most of cases)
 
 <img width="1063" height="641" alt="image" src="https://github.com/user-attachments/assets/f93c8edb-2e29-4d25-917f-eab9b157d9a4" />
 
-1. **Add files** from this repo into your ZIP file, upload to AWS Beanstalk, and deploy.
-  (**Change foldername platform -> .platform, ebextensions-> .ebextensions**)
+1. Set up your beanstalk environment. Check above for reference setting
+2. Download the files and **Change foldername platform -> .platform, ebextensions-> .ebextensions**
 3. (Optional) Set **Environment Properties** in EB → Configuration → Software:
 
    * `UDP514_STRICT_VERIFY=1` (default)
@@ -141,8 +141,9 @@ If you use AWS Firehose for output of fluentd. (You will for most of cases)
    * `UDP514_DISCOVER_MAX_SECS=300` (default)
    * `SWAP_SIZE_GB=2` (if using the swap hook)
 4. Edit /config/fluentd.conf to your preference
-5. Ensure your **Instance SG** allows **UDP/5140** from the NLB.
-6. Deploy. The hook will:
+5. Ensure your **Instance Security Group** allows **UDP/5140**.
+6. **Add files** from this repo into your ZIP file, upload to AWS Beanstalk, and deploy.
+7. Deploy. The hook will:
 
    * Create TG `tg-eb-udp-5140` if missing (UDP/5140, HC TCP/5140)
    * Attach TG to the ASG
