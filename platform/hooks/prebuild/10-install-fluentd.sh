@@ -6,10 +6,8 @@ for f in /var/app/staging/.platform/hooks/prebuild/*.sh /var/app/staging/.platfo
   [[ -f "$f" ]] && sed -i 's/\r$//' "$f"
 done
 
-# ❌ ruby / ruby-devel 설치 금지
-# dnf install -y ruby ruby-devel  # <- 제거
+# dnf install -y ruby ruby-devel  #Only if you need it
 
-# 필요한 빌드 도구만 (짧고 빠름)
 dnf install -y gcc make || true
 
 # gem으로 fluentd/플러그인 설치 (내장 Ruby 사용)
