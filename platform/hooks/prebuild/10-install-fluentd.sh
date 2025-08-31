@@ -10,7 +10,7 @@ done
 
 dnf install -y gcc make || true
 
-# gem으로 fluentd/플러그인 설치 (내장 Ruby 사용)
+# Edit if you need any additional plugins
 gem update --system --no-document || true
 gem install --no-document fluentd
 gem install --no-document fluent-plugin-kinesis fluent-plugin-rewrite-tag-filter fluent-plugin-record-modifier
