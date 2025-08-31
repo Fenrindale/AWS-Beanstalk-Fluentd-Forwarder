@@ -4,7 +4,7 @@ i decided to customize AWS beanstalk to somehow collect UDP streams.
 
 It is easy to manage auto-scaled EC2s with automatic OS / package patch management.
 
-Forward external **syslog UDP/514** traffic through an **AWS NLB** to your **Elastic Beanstalk** instances on **UDP/5140**, with health-checked delivery and update-safe automation.
+Forward external **syslog UDP/514** traffic through an **AWS NLB** to your **Elastic Beanstalk** instances on **UDP/5140**, with health-checked delivery.
 This repo contains minimal Beanstalk hooks that:
 
 * Create/ensure a **Target Group** `tg-eb-udp-5140` (UDP/5140, **health check: TCP/5140**)
@@ -16,6 +16,7 @@ This repo contains minimal Beanstalk hooks that:
 > These hooks are **idempotent**, use **IMDSv2**, and are resilient to **Managed Platform Updates (Immutable)** that spin up a temporary ASG.
 
 ---
+<img width="963" height="320" alt="image" src="https://github.com/user-attachments/assets/5f731a8e-557c-4394-ac79-c6d756d55313" />
 
 ## How It Works
 
