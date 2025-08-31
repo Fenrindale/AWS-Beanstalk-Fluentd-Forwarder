@@ -1,0 +1,1 @@
+web: /usr/bin/bash -lc 'exec tail -f /dev/null'
