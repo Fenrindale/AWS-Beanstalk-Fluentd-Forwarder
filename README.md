@@ -16,7 +16,7 @@ This repo contains minimal Beanstalk hooks that:
 > These hooks are **idempotent**, use **IMDSv2**, and are resilient to **Managed Platform Updates (Immutable)** that spin up a temporary ASG.
 
 ---
-<img width="963" height="320" alt="image" src="https://github.com/user-attachments/assets/5f731a8e-557c-4394-ac79-c6d756d55313" />
+<img width="964" height="304" alt="image" src="https://github.com/user-attachments/assets/db2e3dd2-333b-4fae-998d-862e6c2e10c5" />
 
 ## How It Works
 
